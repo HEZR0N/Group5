@@ -1,0 +1,250 @@
+#shoponly :root{
+    --gra: linear-gradient(45deg, cyan, royalblue);
+}
+#shoponly  *{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+#shoponly  main{
+  width: 90%;
+  margin: 60px auto;
+  font-family: sans-serif;
+
+}
+#shoponly  header{
+  width: 100%;
+  height: 100px;
+  border-bottom: 2px solid #e5e5e5;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+#shoponly header ul li{
+  list-style: none;
+  padding: 20px;
+  margin: 20px;
+  float: left;
+  font-size: 20px;
+  border-radius: 35px;
+}
+
+#shoponly header ul li a{
+  color: inherit;
+  text-decoration: none;
+
+}
+
+#shoponly header ul li.active{
+  background: var(--gra);
+}
+#shoponly header ul li.active a{
+  color:white;
+  font-weight: bold;
+}
+#shoponly .filter-conditon{
+  padding:20px;
+  height:100px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#shoponly .filter-conditon select{
+  width: 120px;
+  padding: 0 0 0 10px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  color: purple;
+  background: transparent;
+  cursor:pointer;
+
+}
+
+#shoponly .product-field{
+  padding: 40px 20px;
+
+}
+
+#shoponly .product-field ul{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+#shoponly .product-field ul li{
+  list-style: none;
+  width:23.4%;
+  height:400px;
+  transition: 0.5 all;
+  background: #355c4a;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 200px 10px 0 10px;
+  position: relative;
+
+}
+
+#shoponly picture{
+  background: #174f35;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  bottom: 41%;
+  width: 75%;
+  height: 85%;
+  border-radius: 50px 20px 0 20px;
+  transform: skewY(40deg);
+  overflow: hidden;
+  box-shadow: 0 1px 0 #00000020, -1px 0 0 #174f35;
+}
+
+#shoponly picture img{
+  width: 95%;
+  z-index: 1;
+  transform: skewY(-40deg);
+  padding: 25px 0 0 0;
+
+}
+
+#shoponly .detail{
+  width: 100%;
+  height: 100;
+}
+
+#shoponly .detail .icon{
+  width: 30%;
+  height: 55%;
+  padding: 20px 5px;
+}
+
+#shoponly .icon span{
+  background: #00000030;
+  display:inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 0;
+  margin: 0 0 20px 5px;
+  font-size:20px;
+  color: white;
+}
+#shoponly .icon span:hover{
+  background: var(--gra);
+  cursor: pointer;
+
+}
+#shoponly .detail>strong{
+  display:inherit;
+  margin: 10px;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: white;
+}
+#shoponly .detail>span{
+  display: inherit;
+  padding: 0 20px;
+  width: 80%;
+}
+#shoponly .detail small{
+  display: inline-block;
+  padding: 8px 20px;
+  margin: 0px;
+  font-weight: bold;
+  border-radius: 6px;
+  border: 1px solid #999;
+  cursor: pointer;
+}
+
+#shoponly .detail small:hover{
+  background: var(--gra);
+  color:white;
+  border-color: cyan;
+}
+
+#shoponly li h4{
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  font-size: 30px;
+  color:white;
+  text-shadow: 1px 1px 2px black;
+}
+  /* mobile styles */
+  @media only screen and (max-width: 714px) { 
+    #shoponly  .menu-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    #shoponly .menu-logo {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  
+    #shoponly .menu-logo img {
+      max-height: 30px;
+    }
+  
+    #shoponly .menu {
+      position: absolute;
+      box-sizing: border-box;
+      width: 300px;
+      left: -300px;
+      top: 0;
+      margin: -20px;
+      padding: 75px 50px 50px;
+      background: #cdcdcd;
+      -webkit-font-smoothing: antialiased;
+      /* to stop flickering of text in safari */
+      transform-origin: 0% 0%;
+      transform: translateX(0%);
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+  
+    #shoponly .menu-container input:checked ~ .menu {
+      transform: translateX(100%);
+    }
+  }
+  
+  /* desktop styles */
+  @media only screen and (min-width: 715px) { 
+    #shoponly .menu-container {
+      width: 100%;
+    }
+  
+    #shoponly .menu-container a {
+      color: #cdcdcd;
+    }
+  
+    #shoponly .menu-container input {
+      display: none;
+    }
+  
+    /* Burger menu */
+    #shoponly .menu-container span {
+      display: none;
+    }
+  
+    #shoponly .menu {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    #shoponly .menu ul {
+      display: flex;
+      padding: 0;
+    }
+  
+    #shoponly .menu li {
+      padding: 0 20px;
+    }
+
+  }

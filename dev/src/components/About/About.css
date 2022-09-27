@@ -1,0 +1,14 @@
+#about .title {
+    text-align:center;
+    font-size: 60px;
+    color: aliceblue;
+    padding: 8px;
+    margin: 130px;
+}
+#about .splash{
+    text-align:center;
+    font-size: 40px;
+    color: aliceblue;
+    padding: 30px;
+    margin: 100px;
+}

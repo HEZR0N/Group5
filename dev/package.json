@@ -9,7 +9,7 @@
   "version": "1.0.0",
   "main": "knexFile.js",
   "scripts": {
-    "start": "node index.js",
+    "start":"node Main",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
