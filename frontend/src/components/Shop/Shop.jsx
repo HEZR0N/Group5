@@ -1,6 +1,7 @@
 import React from 'react'
 import './Shop.css'
 import clouds from '../../assets/storm.png'
+import l from './sort.js'
 
 const data = [
     {
@@ -48,6 +49,7 @@ const data = [
   ]
 
 const Shop = () => {
+    l()
   return (
     <>
     <div id='shoponly'>
