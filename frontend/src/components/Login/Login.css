@@ -1,0 +1,69 @@
+#lugin body{
+    background-color: #1f1f38;
+    font-family: sans-serif;
+}
+#lugin .signup-box{
+width: 360px;
+height: 620px;
+margin: auto;
+background-color: white;
+border-radius: 3px;
+}
+
+#lugin .login-box{
+    width: 360px;
+    height: 280px;
+    margin: auto;
+    border-radius: 3px;
+    background-color: white;
+}
+
+#lugin h1{
+    text-align: center;
+    padding-top: 15px;
+}
+#lugin h4{
+    text-align: center;
+}
+#lugin form{
+    width: 300px;
+    margin-left: 20px;
+}
+#lugin form label{
+    display:flex;
+    margin-top: 20px;
+    font-size:18px;
+}
+#lugin form input{
+ width: 100%;
+ padding:7px;
+ border: none;
+ border: 1px solid gray;
+ border-radius: 6px;
+ outline: none;
+}
+
+#lugin input[type="button"]{
+    width: 320px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: #1f1f38;
+    color: white;
+    font-size: 18px;
+}
+#lugin p{
+    text-align: center;
+    padding-top: 20px;
+    font-size:15px;
+}
+#lugin .para-2{
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    margin-top: -10px;
+}
+
+#lugin .para-2 a{
+    color: #49c1a2;
+}
