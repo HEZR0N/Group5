@@ -9,7 +9,8 @@
   "version": "1.0.0",
   "main": "knexFile.js",
   "scripts": {
-    "start":"node Main",
+    "start": "node Main",
+    "start-dev": "nodemon Main",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
