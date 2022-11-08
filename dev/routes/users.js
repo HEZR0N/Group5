@@ -23,7 +23,9 @@ router.post('/', (req, res) => {
     name: req.body.name,
     email: req.body.email, 
     hash: req.body.hash, 
-    isAdmin: req.body.isAdmin
+    isAdmin: req.body.isAdmin,
+    apiToken: req.body.apiToken,
+    promoCode: req.body.promoCode
   })
   .returning('*')
   .then(user => {
