@@ -4,7 +4,9 @@ import './Contact.css'
 const Contact = () => {
   return (
     <>
-    <p>Contact</p>
+    <div id="nfound">
+    <p class="nftext">The page you are looking for is in another castle</p>
+    </div>
     </>
   )
 }
