@@ -9,6 +9,7 @@ import About from './components/About/About'
 import Contact from './components/Contact/Contact'
 import Altshop from './components/Altshop/Altshop'
 import Login from './components/Login/Login'
+import Default from './components/Default/Default'
 
 const app = () => {
 
@@ -22,7 +23,7 @@ const app = () => {
       <Route path="/About" element={ <About/>} />
       <Route path="/Contact" element={<Contact/>}/>
       <Route path="/Login" element={<Login/>}/> 
-      <Route path="*" element={ <p>not found</p>} />
+      <Route path="*" element={ <Default/>} />
     </Routes>
      </>
     
