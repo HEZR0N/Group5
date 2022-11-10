@@ -1,0 +1,69 @@
+#signuponly body{
+    background-color: #1f1f38;
+    font-family: sans-serif;
+}
+#signuponly .signup-box{
+width: 360px;
+height: 620px;
+margin: auto;
+background-color: white;
+border-radius: 3px;
+}
+
+#signuponly .login-box{
+    width: 360px;
+    height: 280px;
+    margin: auto;
+    border-radius: 3px;
+    background-color: white;
+}
+
+#signuponly h1{
+    text-align: center;
+    padding-top: 15px;
+}
+#signuponly h4{
+    text-align: center;
+}
+#signuponly form{
+    width: 300px;
+    margin-left: 20px;
+}
+#signuponly form label{
+    display:flex;
+    margin-top: 20px;
+    font-size:18px;
+}
+#signuponly form input{
+ width: 100%;
+ padding:7px;
+ border: none;
+ border: 1px solid gray;
+ border-radius: 6px;
+ outline: none;
+}
+
+#signuponly input[type="button"]{
+    width: 320px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: #1f1f38;
+    color: white;
+    font-size: 18px;
+}
+#signuponly p{
+    text-align: center;
+    padding-top: 20px;
+    font-size:15px;
+}
+#signuponly .para-2{
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    margin-top: -10px;
+}
+
+#signuponly .para-2 a{
+    color: #49c1a2;
+}
