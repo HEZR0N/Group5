@@ -2,51 +2,56 @@ import React, { useState } from 'react'
 import './Altshop.css'
 import clouds from '../../assets/storm.png'
 
-const data = [
-    {
-      id: 1,
-      image: clouds,
-      title: 'CALL OF DUTY',
-      description: 'adventure game',
-      price:'39.54$',
-    },
-    {
-      id: 2,
-      image: clouds,
-      title: 'GTA 5',
-      description: 'adventure game',
-      price:'39.5$',
-    },
-    {
-      id: 3,
-      image: clouds,
-      title: 'MULTIVERSUS',
-      description: 'adventure game',
-      price:'39.5$',
-    },
-    {
-      id: 4,
-      image: clouds,
-      title: 'THE LEGEND OF ZELDA',
-      description: 'adventure game',
-      price:'39.5$',
-    },
-    {
-      id: 5,
-      image: clouds,
-      title: 'SAMPLE GAME',
-      description: 'adventure game',
-      price:'39.5$',
-    },
-    {
-      id: 6,
-      image: clouds,
-      title: 'SAMPLE GAME',
-      description: 'adventure game',
-      price:'39.5$',
-    },
-  ]
-
+// const data = [
+//     {
+//       id: 1,
+//       image: 'https://imgs.search.brave.com/GKXVrFtsLg5L5vQ10f8zBhlMNhh9y2kcwUJ4UHSISU4/rs:fit:1024:683:1/g:ce/aHR0cHM6Ly93d3cu/ZHNjLm9yZy51ay93/cC1jb250ZW50L3Vw/bG9hZHMvMjAxNy8w/NS9wdWJsaWMtc3Bl/YWtpbmctMTAyNHg2/ODMuanBn',
+//       title: 'CALL OF DUTY',
+//       description: 'adventure game',
+//       price:'39.54$',
+//     },
+//     {
+//       id: 2,
+//       image: clouds,
+//       title: 'GTA 5',
+//       description: 'adventure game',
+//       price:'39.5$',
+//     },
+//     {
+//       id: 3,
+//       image: clouds,
+//       title: 'MULTIVERSUS',
+//       description: 'adventure game',
+//       price:'39.5$',
+//     },
+//     {
+//       id: 4,
+//       image: clouds,
+//       title: 'THE LEGEND OF ZELDA',
+//       description: 'adventure game',
+//       price:'39.5$',
+//     },
+//     {
+//       id: 5,
+//       image: clouds,
+//       title: 'SAMPLE GAME',
+//       description: 'adventure game',
+//       price:'39.5$',
+//     },
+//     {
+//       id: 6,
+//       image: clouds,
+//       title: 'SAMPLE GAME',
+//       description: 'adventure game',
+//       price:'39.5$',
+//     },
+//   ]
+// const data = await fetch('http://localhost:5000/api/items/').then(response => {
+//   return response.json()});
+async function getItems(){
+  return (await fetch('http://localhost:5000/api/items/')).json()
+}
+const item_data = await getItems();
 const Altshop = () => {
   return (
     <>
@@ -73,18 +78,18 @@ const Altshop = () => {
 <br></br>
       <div className="container portfolio__container">
         {
-          data.map(({id, image, title, description,price,}) =>{
+          item_data.map(({id, image_url, name, category,price,}) =>{
             return(
               <article key={id} className='portfolio__item'>
           <div className="portfolio__item-image">
-            <img src={image} alt={title} />
+            <img src={image_url} alt={name} />
           </div>
-          <h1>{title}</h1>
-          <h3>{description}</h3>
+          <h1>{name}</h1>
+          <h3>{category}</h3>
           <div className="portfolio__item-cta">
           <button className='btn' target='_blank'>buy now</button>
           <button className='btn btn-primary' target='_blank'>add to cart</button>
-          <h1>{price}</h1>
+          <h1>{'$'+price/100}</h1>
           </div>
         </article>
             )
