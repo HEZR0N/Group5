@@ -14,6 +14,7 @@ exports.up = function(knex) {
     })
     .createTable('items', table => {
         table.increments('id')
+        table.integer('quantity')
         table.integer('price')
         table.string('name')
         table.string('category')
