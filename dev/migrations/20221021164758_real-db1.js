@@ -11,7 +11,7 @@ exports.up = function(knex) {
         table.string('name')
         table.string('email').unique()
         table.string('hash')
-        table.boolean('isAdmin')
+        table.boolean('isAdmin').defaultTo(false)
         table.string('apiToken').unique()
         table.string('promoCode')
             .references('code')
@@ -21,16 +21,16 @@ exports.up = function(knex) {
     })
     .createTable('items', table => {
         table.increments('id')
-        table.integer('quantity')
-        table.integer('price')
+        table.integer('quantity').defaultTo(1)
+        table.integer('price').defaultTo(2000)
         table.string('name').unique()
-        table.string('category')
+        table.string('category').defaultTo('adventure game')
         table.string('image_url')
     })
     .createTable('orders', table => {
         table.increments('id')
         table.integer('total_price')
-        table.string('date')
+        table.string('date').defaultTo(knex.fn.now())
         table.integer('order_number').unique()
         // table.index('order_number')
         table.integer('user_id')
@@ -53,7 +53,7 @@ exports.up = function(knex) {
             .inTable('users')
             .onDelete('CASCADE')
             .onUpdate('CASCADE')
-        table.integer('quantity')
+        table.integer('quantity').defaultTo(1)
     })
     .createTable('order_items', table => {
         table.integer('order_id')
@@ -68,7 +68,7 @@ exports.up = function(knex) {
             .inTable('items')
             .onDelete('CASCADE')
             .onUpdate('CASCADE')
-        table.integer('quantity')
+        table.integer('quantity').defaultTo(1)
     })
 };
 

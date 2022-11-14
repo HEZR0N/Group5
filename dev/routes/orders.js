@@ -18,6 +18,12 @@ router.get('/:id', (req, res) => {
   });
 });
 
+router.get('/user/:user_id', (req, res) => {
+  Orders().where({user_id: req.params.user_id}).pluck('id').then(ids => { // orderBy
+    res.json(ids);
+  });
+});
+
 router.post('/', (req, res) => {
   Orders().insert({ 
     order_number: req.body.order_number,
