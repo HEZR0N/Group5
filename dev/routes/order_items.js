@@ -37,7 +37,8 @@ router.put('/:order_id/:item_id', (req, res) => {
     // order_id: req.body.order_id,
     quantity: req.body.quantity
   })
-  .where({id: req.params.id})
+  .where({user_id: req.body.user_id})
+  .where({item_id: req.body.item_id})
   .returning('*')
   .then(order_item => {
     Order_items().where({quantity: 0}).del()

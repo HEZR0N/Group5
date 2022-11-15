@@ -25,7 +25,7 @@ exports.up = function(knex) {
         table.integer('price').defaultTo(2000)
         table.string('name').unique()
         table.string('category').defaultTo('adventure game')
-        table.string('image_url')
+        table.specificType('image_url', "varchar")
     })
     .createTable('orders', table => {
         table.increments('id')

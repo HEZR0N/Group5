@@ -37,7 +37,8 @@ router.put('/:user_id/:item_id', (req, res) => {
     // user_id: req.body.user_id,
     quantity: req.body.quantity
   })
-  .where({id: req.params.id})
+  .where({user_id: req.body.user_id})
+  .where({item_id: req.body.item_id})
   .returning('*')
   .then(cart_item => {
     Cart_items().where({quantity: 0}).del()
@@ -46,7 +47,7 @@ router.put('/:user_id/:item_id', (req, res) => {
 });
 
 router.delete('/:user_id', (req, res) => {
-  Cart_items().where({id: req.params.user_id}).del()
+  Cart_items().where({user_id: req.params.user_id}).del()
   .then(result => {
     res.status(200).send(req.params.user_id);
   });

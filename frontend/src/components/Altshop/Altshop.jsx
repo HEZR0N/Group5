@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Altshop.css'
 import clouds from '../../assets/storm.png'
+import { getItems } from '../../backend_calls/fetch_items'
 
 // const data = [
 //     {
@@ -48,9 +49,9 @@ import clouds from '../../assets/storm.png'
 //   ]
 // const data = await fetch('http://localhost:5000/api/items/').then(response => {
 //   return response.json()});
-async function getItems(){
-  return (await fetch('http://localhost:5000/api/items/')).json()
-}
+// async function getItems(){
+//   return (await fetch('http://localhost:5000/api/items/')).json()
+// }
 const item_data = await getItems();
 const Altshop = () => {
   return (

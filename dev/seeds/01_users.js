@@ -8,6 +8,6 @@ exports.seed = async function(knex) {
   await knex('users').insert([
     {name: "john smith", email: "jsmith@gmail.com", hash: "1234"},
     {name: "jane doe", email: "jdoe@gmail.com", hash: "12345"},
-    {name: "admin user", email: "admin@gmail.com", hash: "group5isalive"}
+    {name: "admin user", email: "admin@gmail.com", hash: "group5isalive", isAdmin: true}
   ]);
 };
