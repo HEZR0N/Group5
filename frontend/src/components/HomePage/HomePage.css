@@ -1,14 +1,74 @@
+#homepageonly{
+    min-height: 100vh;
+    height: auto;
+    width: auto;
+    padding:none;
+    background-color: black;
+    background-image: url(https://i.imgur.com/JNQSxAo.gif);
+    background-position:center;
+    background-attachment:scroll;
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: #fff;
+    position:relative;
+    
+}
+
 #homepageonly .title {
     text-align:center;
+    font-family: 'Pixel';
     font-size: 60px;
-    color: aliceblue;
-    padding: 8px;
-    margin: 130px;
+    color:aliceblue;
+    padding: 10px;
+    margin-top: 0;
+    animation: example 1s linear forwards;
+    
 }
 #homepageonly .splash{
     text-align:center;
+    font-family:'Pixel';
     font-size: 40px;
-    color: aliceblue;
-    padding: 30px;
-    margin: 100px;
+    color:aliceblue;
+    padding: 10px;
+    margin: 50px;
+    opacity: 0;
+    animation: example 1s ease forwards;
+    animation-delay: 1s;
+    
+}
+
+#homepageonly .btn-h {
+    display:inline-block;
+    width: auto;
+    clear: both;
+    margin: auto;
+    block-size: fit-content;
+    text-align: center;
+    font-family: 'Pixel';
+    font-size: 40px;
+    text-decoration: none;
+    color: var(--color-white);
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    background:transparent;
+    opacity: 0;
+    animation: example 1s ease forwards;
+    animation-delay: 1s;
+    transition: var(--transition);
+}
+
+#homepageonly .btn-h:hover{
+    text-decoration:underline;
+    background: var(--color-white);
+    color: var(--color-bg);
+    border-color: transparent;
+}
+
+#center{
+    text-align: center;
+}
+
+html{
+    height: 100vh;
 }
