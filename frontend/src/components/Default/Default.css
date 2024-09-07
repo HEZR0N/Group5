@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Pixel';
+    src: url(../../assets/upheavtt.ttf);
+}
+
+#nfound{
+    min-height: 100vh;
+    height: auto;
+    width: auto;
+    padding:none;
+    background-color: black;
+    background-image: url(https://i.imgur.com/QOZS3Ik.gif);
+    background-position:center;
+    background-attachment:scroll;
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: #fff;
+    position:relative;
+    
+}
+
+#nfound .nftext {
+    text-align:center;
+    font-family: 'Pixel';
+    font-size: 60px;
+    color:aliceblue;
+    padding: 10px;
+    margin-top: 0;
+    animation: example 1s linear forwards;
+    
+}
+
+
+
+#nfound .btn-nf {
+    display:inline-block;
+    width: auto;
+    clear: both;
+    margin: auto;
+    block-size: fit-content;
+    text-align: center;
+    font-family: 'Pixel';
+    font-size: 40px;
+    text-decoration: none;
+    color: var(--color-white);
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    background:transparent;
+    transition: var(--transition);
+}
+
+#nfound .btn-nf:hover{
+    text-decoration:underline;
+    background: var(--color-white);
+    color: var(--color-bg);
+    border-color: transparent;
+}
+
+#center{
+    text-align: center;
+}
